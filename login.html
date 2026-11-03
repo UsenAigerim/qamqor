@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кіру - Qarjy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <a href="index.html" class="logo">₸ Qarjy</a>
+</header>
+
+<div class="login-box">
+    <h2>Қош келдіңіз!</h2>
+
+    <div class="tabs">
+        <button onclick="showLogin()">Кіру</button>
+        <button onclick="showRegister()">Тіркелу</button>
+    </div>
+
+    <form id="loginForm">
+        <input id="loginEmail" type="email"
+               placeholder="Email" required>
+
+        <input id="loginPassword" type="password"
+               placeholder="Құпиясөз" required>
+
+        <button class="btn" type="submit">Жүйеге кіру</button>
+    </form>
+
+    <form id="registerForm" class="hidden">
+        <input id="regName" type="text"
+               placeholder="Аты-жөніңіз" required>
+
+        <input id="regEmail" type="email"
+               placeholder="Email" required>
+
+        <input id="regPassword" type="password"
+               placeholder="Құпиясөз" required minlength="4">
+
+        <button class="btn" type="submit">Тіркелу</button>
+    </form>
+
+    <p id="message"></p>
+</div>
+
+<script src="auth.js"></script>
+</body>
+</html>
