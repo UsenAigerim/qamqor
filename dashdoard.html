@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qarjy Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <a href="index.html" class="logo">₸ Qarjy</a>
+    <button onclick="logout()">Шығу</button>
+</header>
+
+<main class="dashboard">
+
+    <h1>Қаржылық панель 👋</h1>
+    <p>Күнделікті қаржылық жағдайыңыз</p>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Жалпы баланс</h3>
+            <h2 id="balance">₸ 225 000</h2>
+        </div>
+
+        <div class="card">
+            <h3>Кіріс</h3>
+            <h2 id="income">₸ 0</h2>
+        </div>
+
+        <div class="card">
+            <h3>Шығын</h3>
+            <h2 id="expense">₸ 0</h2>
+        </div>
+    </div>
+
+    <section class="card">
+        <h2>Жаңа операция қосу</h2>
+
+        <form id="transactionForm">
+
+            <label>Операция түрі</label>
+            <select id="type">
+                <option value="income">Кіріс</option>
+                <option value="expense">Шығын</option>
+            </select>
+
+            <label>Сома</label>
+            <input type="number" id="amount"
+                   placeholder="5000" min="1" required>
+
+            <label>Санат</label>
+            <select id="category">
+                <option>Тамақ</option>
+                <option>Көлік</option>
+                <option>Сауда</option>
+                <option>Денсаулық</option>
+                <option>Жалақы</option>
+                <option>Басқа</option>
+            </select>
+
+            <label>Әмиян</label>
+            <select id="wallet">
+                <option>Kaspi</option>
+                <option>Halyk</option>
+                <option>Қолма-қол</option>
+            </select>
+
+            <input type="text" id="description"
+                   placeholder="Сипаттама">
+
+            <button class="btn" type="submit">
+                Сақтау
+            </button>
+        </form>
+    </section>
+
+    <section class="card">
+        <h2>Соңғы операциялар</h2>
+        <div id="transactions"></div>
+    </section>
+
+    <section class="card">
+        <h2>Айлық бюджет</h2>
+        <p>Лимит: 200 000 ₸</p>
+        <h3 id="budget">0%</h3>
+        <progress id="progress" value="0" max="100"></progress>
+    </section>
+
+    <section class="card">
+        <h2>Менің әмияндарым</h2>
+        <p>Kaspi: <b id="kaspi">125 000 ₸</b></p>
+        <p>Halyk: <b id="halyk">85 000 ₸</b></p>
+        <p>Қолма-қол: <b id="cash">15 000 ₸</b></p>
+    </section>
+
+</main>
+
+<script src="dashboard.js"></script>
+</body>
+</html>
