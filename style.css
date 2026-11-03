@@ -1,0 +1,392 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --purple: #7658e8;
+    --purple-light: #eeeaff;
+    --dark: #25243a;
+    --gray: #858599;
+    --bg: #f7f6fc;
+    --green: #20ad82;
+    --red: #e66b7b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    background: var(--bg);
+    color: var(--dark);
+}
+
+/* HEADER */
+
+header {
+    background: white;
+    padding: 20px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 3px 20px #27204408;
+}
+
+.logo {
+    color: var(--purple);
+    font-size: 27px;
+    font-weight: 800;
+    text-decoration: none;
+    letter-spacing: -1px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+nav a {
+    color: #77768a;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: var(--purple);
+}
+
+/* BUTTONS */
+
+.btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #7658e8, #9b83f5);
+    color: white;
+    padding: 14px 25px;
+    border: none;
+    border-radius: 12px;
+    font-family: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+    transition: .3s;
+    box-shadow: 0 8px 20px #7658e833;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px #7658e844;
+}
+
+/* HERO */
+
+.hero {
+    max-width: 1150px;
+    margin: auto;
+    padding: 100px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 55px;
+}
+
+.hero h1 {
+    font-size: clamp(34px, 5vw, 53px);
+    line-height: 1.2;
+    font-weight: 800;
+    letter-spacing: -2px;
+    color: var(--dark);
+    margin-bottom: 22px;
+}
+
+.hero h1::first-line {
+    color: var(--purple);
+}
+
+.hero p {
+    color: var(--gray);
+    line-height: 1.9;
+    font-size: 14px;
+    margin-bottom: 30px;
+    max-width: 480px;
+}
+
+.hero-card {
+    background: linear-gradient(135deg, #7155e6, #a18cf5);
+    color: white;
+    padding: 38px;
+    border-radius: 25px;
+    min-width: 300px;
+    box-shadow: 0 25px 55px #7658e844;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-card h3 {
+    font-size: 14px;
+    font-weight: 500;
+    opacity: .85;
+}
+
+.hero-card h1 {
+    color: white;
+    font-size: 35px;
+    margin: 25px 0;
+}
+
+.hero-card p {
+    color: white;
+    margin: 0;
+}
+
+/* FEATURES */
+
+#features {
+    max-width: 1150px;
+    margin: auto;
+    padding: 60px 25px 90px;
+    text-align: center;
+}
+
+#features h2 {
+    font-size: 30px;
+    margin-bottom: 35px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-top: 30px;
+}
+
+.card {
+    background: white;
+    padding: 28px;
+    border: 1px solid #efedf6;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px #29204408;
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px #7658e81a;
+}
+
+.card h3 {
+    font-size: 17px;
+    margin-bottom: 14px;
+}
+
+.card p {
+    color: var(--gray);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* LOGIN PAGE */
+
+.auth,
+body:has(.login-box) {
+    background: linear-gradient(135deg, #f2efff, #faf9ff);
+    min-height: 100vh;
+}
+
+.login-box {
+    background: white;
+    max-width: 440px;
+    margin: 65px auto;
+    padding: 38px;
+    border-radius: 24px;
+    box-shadow: 0 20px 65px #30205c15;
+}
+
+.login-box h2 {
+    font-size: 26px;
+    margin-bottom: 12px;
+}
+
+.tabs {
+    display: flex;
+    gap: 10px;
+    margin: 25px 0;
+}
+
+.tabs button {
+    flex: 1;
+    padding: 13px;
+    background: var(--purple-light);
+    color: var(--purple);
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.tabs button:hover {
+    background: var(--purple);
+    color: white;
+}
+
+input, select {
+    width: 100%;
+    padding: 14px;
+    margin: 10px 0;
+    border: 1px solid #e9e7f0;
+    border-radius: 11px;
+    font-family: inherit;
+    font-size: 13px;
+    outline: none;
+    background: #fcfbff;
+}
+
+input:focus, select:focus {
+    border-color: var(--purple);
+    box-shadow: 0 0 0 3px #7658e817;
+}
+
+.login-box .btn {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* DASHBOARD */
+
+.dashboard {
+    max-width: 1150px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.dashboard > h1 {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.dashboard > p {
+    color: var(--gray);
+    margin-bottom: 25px;
+}
+
+.dashboard .cards {
+    margin-bottom: 25px;
+}
+
+.dashboard .cards .card:first-child {
+    background: linear-gradient(135deg, #7658e8, #9b83f5);
+    color: white;
+}
+
+.dashboard .cards .card:first-child h3 {
+    color: #eeeaff;
+}
+
+.dashboard .cards .card h2 {
+    font-size: 25px;
+}
+
+.dashboard .card {
+    margin-bottom: 20px;
+}
+
+.dashboard .card h2 {
+    margin-bottom: 15px;
+}
+
+/* TRANSACTIONS */
+
+#transactions p {
+    padding: 13px;
+    border-bottom: 1px solid #f0eef6;
+    font-size: 13px;
+    color: var(--dark);
+}
+
+/* BUDGET */
+
+progress {
+    width: 100%;
+    height: 12px;
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    accent-color: var(--purple);
+}
+
+progress::-webkit-progress-bar {
+    background: #eeeaf8;
+    border-radius: 20px;
+}
+
+progress::-webkit-progress-value {
+    background: linear-gradient(90deg, #7658e8, #a18cf5);
+    border-radius: 20px;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 30px;
+    color: var(--gray);
+    font-size: 12px;
+    background: white;
+    margin-top: 50px;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media(max-width: 750px) {
+
+    header {
+        padding: 17px 5%;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 11px;
+    }
+
+    .hero {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 55px 7%;
+        gap: 35px;
+    }
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .hero-card {
+        min-width: 0;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .login-box {
+        margin: 40px 18px;
+        padding: 25px;
+    }
+
+    .dashboard {
+        padding: 15px;
+    }
+
+    .dashboard > h1 {
+        font-size: 24px;
+    }
+}
